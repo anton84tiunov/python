@@ -7,6 +7,5 @@ class Config_mail(object):
     MAIL_USE_TLS = True
     MAIL_USE_SSL = False
     MAIL_DEBUG = True
-    MAIL_USERNAME = "anton84tiu@gmail.com"
-    MAIL_DEFAULT_SENDER = "anton84tiu@gmail.com"
+    MAIL_USERNAME = ""
     MAIL_PASSWORD = ""
