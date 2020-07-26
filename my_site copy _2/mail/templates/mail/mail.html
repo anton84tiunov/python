@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block head %}
+     {{ super() }}
+    <link type='text/css' rel="stylesheet" href="{{url_for('.static',filename='mail/css/mail.css')}}">
+    <title>Главная</title>
+{% endblock %}
+{% block body %}
+{{ super() }}
+bl_mail{{d}}
+    <script type='text/javascript' src="{{url_for('.static',filename='mail/js/mail.js')}}"></script>
+{% endblock %}

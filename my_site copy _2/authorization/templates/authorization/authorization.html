@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block head %}
+     {{ super() }}
+    <link type='text/css' rel="stylesheet" href="{{url_for('.static',filename='authorization/css/authorization.css')}}">
+    <title>Главная</title>
+{% endblock %}
+{% block body %}
+{{ super() }}
+<div id="div_form_authorization">
+    <p>Авторизация</p><br>
+    <table>
+        <tr class="tr_aut">
+            <td class="td_aut">введите ваш логин</td>
+            <td class="td_aut"><input type="text" id="login_aut"></td>
+        </tr>
+        <tr class="tr_aut">
+            <td class="td_aut">придумайте свой пароль</td>
+            <td class="td_aut"><input type="password" id="pass_aut"></td>
+        </tr>
+    </table>
+      <br>
+    <br>
+    <button id="btn_sub_aut">отправить</button>
+    <br>
+    <br>
+    <button id="btn_show_coocies_aut">показать куки</button>
+    <br>
+    <br>
+    <button id="btn_dell_coocies_aut">удалить куки</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+    <script type='text/javascript' src="{{url_for('.static',filename='authorization/js/authorization.js')}}"></script>
+{% endblock %}

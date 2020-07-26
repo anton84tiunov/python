@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block head %}
+     {{ super() }}
+    <link type='text/css' rel="stylesheet" href="{{url_for('.static',filename='registration/css/registration.css')}}">
+    <title>Главная</title>
+{% endblock %}
+{% block body %}
+{{ super() }}
+bl_reg
+<div id="div_form_registration">
+    <p>Регистрация</p><br>
+    <table>
+        <tr class="tr_reg">
+            <td class="td_reg">введите ваше имя</td>
+            <td class="td_reg"><input type="text" id="name_reg"></td>
+        </tr>
+        <tr class="tr_reg">
+            <td class="td_reg">введите вашу фамилию</td>
+            <td class="td_reg"><input type="text" id="surname_reg"></td>
+        </tr>
+        <!-- <tr class="tr_reg">
+            <td class="td_reg">выберите кем на сайте<br> вы хотите являться</td>
+            <td class="td_reg">
+                <select name="buyer_seller" id="buyer_seller_reg">
+                    <option selected value="buyer">покупатель</option>
+                    <option value="seller">продавец</option>
+                    <option value="buyer_seller">покупатель-продавец</option>
+                </select>
+            </td>
+        </tr> -->
+        <tr class="tr_reg">
+            <td class="td_reg">выберите вашу дату рождения</td>
+            <td class="td_reg"><input type="date" id="date_reg"></td>
+        </tr>
+        <tr class="tr_reg">
+            <td class="td_reg">ваш электронный адрес</td>
+            <td class="td_reg"><input type="email" id="email_reg"></td>
+        </tr>
+        <tr class="tr_reg">
+            <td class="td_reg">придумайте свой логин</td>
+            <td class="td_reg"><input type="email" id="login_reg"></td>
+        </tr>
+        <tr class="tr_reg">
+            <td class="td_reg">придумайте свой пароль</td>
+            <td class="td_reg"><input type="password" id="pass_reg_1"></td>
+        </tr>
+        <tr class="tr_reg">
+            <td class="td_reg">введите свой пароль еще раз</td>
+            <td class="td_reg"><input type="password" id="pass_reg_2"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <button id="btn_sub_reg_1">отправить</button>
+    <br>
+    <br>
+    <p>введите код отпраавленный вам на почту</p>
+    <input type="text" id="cod_mail_reg">
+    <br>
+    <br>
+    <button id="btn_sub_reg_2">отправить</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+    <script type='text/javascript' src="{{url_for('.static',filename='registration/js/registration.js')}}"></script>
+{% endblock %}

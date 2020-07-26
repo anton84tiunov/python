@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block head %}
+     {{ super() }}
+    <link type='text/css' rel="stylesheet" href="{{url_for('.static',filename='category/css/category_base.css')}}">
+{% endblock %}
+{% block body %}
+{{ super() }}
+    <div id="div_cards"></div>
+    <script type='text/javascript' src="{{url_for('.static',filename='category/js/category_base.js')}}"></script>
+{% endblock %}

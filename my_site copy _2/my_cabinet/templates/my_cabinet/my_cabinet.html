@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block head %}
+     {{ super() }}
+    <link type='text/css' rel="stylesheet" href="{{url_for('.static',filename='my_cabinet/css/my_cabinet.css')}}">
+    <title>Почта</title>
+{% endblock %}
+{% block body %}
+{{ super() }}
+    <h2>Личный кабинет</h2>
+    <p id="name_user"></p>
+    <div id="div_buyer_seller_my_cabinet">
+        <p>Выберите в качестве кого вы хотите зайти</p>
+        <button id="btn_my_cabinet_buyer">покупатель</button>
+        <button id="btn_my_cabinet_seller">продавец</button>
+        <p id="buyer_seller_user"></p>
+    </div>
+    <div id="div_buyer_my_cabinet">
+        <button id="btn_buyer_history_show">показать вашу историю</button>
+        <button id="btn_buyer_history_hide">скрыть вашу историю</button><br>
+        <div id="div_buyer_history"></div><br>
+    </div>
+    <div id="div_seller_my_cabinet">
+        <button id="btn_seller_history_show">показать вашу историю</button>
+        <button id="btn_seller_history_hide">скрыть вашу историю</button><br>
+        <div id="div_seller_history"></div>
+        <br>
+        <button id="btn_seller_products_show">показать ваши товары</button>
+        <button id="btn_seller_products_hide">скрыть ваши товары</button><br>
+        <div id="div_seller_products"></div>
+        <br>
+        <button id="btn_seller_put_up">выставить новый товар</button>
+        <button id="btn_seller_put_up_out">закрыть</button><br>
+        <div id="div_seller_put_up">
+            <p>заполните форму для размещения нового товара</p>
+            <table>
+                <tr>
+                    <td>Введите название нового товара</td>
+                    <td><input type="text" id="inp_name_new_product"></td>
+                </tr>
+                <tr>
+                    <td>Выберите категорию нового товара</td>
+                    <td>
+                        <select name="category_product" id="sel_category_product">
+                            <option value="category_sport">Спорт</option>
+                            <option value="category_clothing">Одежда</option>
+                            <option value="category_org_technique">Орг техника</option>
+                            <option value="category_for_home">Для дома</option>
+                            <option value="category_entertainment">Развлечения</option>
+                            <option value="category_miscellaneous">Разное</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>введите описание товара</td>
+                    <td><textarea id="inp_description_product"></textarea></td>
+                </tr>
+                <tr>
+                    <td>введите цену товара</td>
+                    <td><input id="inp_price_product" type="text"></td>
+                </tr>
+
+            </table>
+            <input id="btn_add_product" type="button" value="загрузить товар" />
+            <br>
+        <form id="upload-file" enctype="multipart/form-data">
+                <p>введите номер вашего товара в котором хотите изменить картинку</p>
+                <input name="num_product" type="text">
+                <p>выберите картинку формата jpg  или  png  на своем компьютере</p>
+                <input name="file_1" type="file">
+                <input id="upload-file-btn" type="button" value="загрузить картинку">
+        </form>
+            <div id="div_photo"></div>
+        </div><br>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <script type='text/javascript' src="{{url_for('.static',filename='my_cabinet/js/my_cabinet.js')}}"></script>
+{% endblock %}

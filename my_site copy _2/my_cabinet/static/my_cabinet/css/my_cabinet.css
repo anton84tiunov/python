@@ -1,0 +1,27 @@
+body{
+    background: rgb(112, 31, 80);
+}
+#div_buyer_my_cabinet{
+    display: none;
+}
+#div_seller_my_cabinet{
+    display: none;
+}
+E#div_buyer_history{
+    display: none;
+}
+#div_seller_history{
+    display: none;
+}
+#div_seller_put_up{
+    display: none;
+}
+#div_seller_history td{
+    border: solid;
+}
+#div_seller_products td{
+    border: solid;
+}
+#div_seller_products{
+    display: none;
+}
