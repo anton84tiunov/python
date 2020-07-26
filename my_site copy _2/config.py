@@ -9,4 +9,4 @@ class Config_mail(object):
     MAIL_DEBUG = True
     MAIL_USERNAME = "anton84tiu@gmail.com"
     MAIL_DEFAULT_SENDER = "anton84tiu@gmail.com"
-    MAIL_PASSWORD = "TESTO12345"
+    MAIL_PASSWORD = ""
